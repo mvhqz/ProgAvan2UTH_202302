@@ -15,22 +15,22 @@ import org.junit.Test;
 public class AppTest {
 	
 	@BeforeClass
-	public void configuracionInicial() {
+	public static void configuracionInicial() {
 		System.out.println("Método de tipo Setup, se ejecuta antes de cada prueba");
 	}
    
 	@Test
-	public void testSuma1() {
+	public static void testSuma1() {
 		assertEquals(App.sumar(5.0, 6.0), 11.0, .0001);
 	}
 	
 	@Test
-	public void testSuma2() {
+	public static void testSuma2() {
 		assertTrue(App.sumar(4.5, 3.8) == 8.3);
 	}
 	
 	@AfterClass
-	public void finalizacionPruebas() {
+	public static void finalizacionPruebas() {
 		System.out.println("Método de tipo TearDown, se ejecuta despues de cada prueba");
 	}
 }
